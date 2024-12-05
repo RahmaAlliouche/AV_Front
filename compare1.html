@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compare Page</title>
+  <style>
+    /* General reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #3a8edc, #1e407c);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      overflow: auto;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 900px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .back-icon {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 30px;
+      color: black;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .back-icon:hover {
+      transform: scale(1.1);
+    }
+
+    .header {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    .compare-section {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 50px auto;
+    }
+
+    .box {
+      width: 250px;
+      height: 250px;
+      background: #d9d9d9;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .btn {
+      margin-top: 30px;
+      background-color: #0a74da;
+      border: none;
+      padding: 15px 30px;
+      color: white;
+      font-size: 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #064a99;
+    }
+
+    .wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 200px;
+      background: url('https://www.svgrepo.com/show/204774/wave-line.svg');
+      background-size: cover;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="javascript:history.back()" class="back-icon">←</a>
+
+  <div class="container">
+    <h1 class="header">Compare</h1>
+    <div class="compare-section">
+      <div class="box">Pic 1</div>
+      <div class="box">Pic 2</div>
+    </div>
+    <button class="btn" href="compare2.html">Go</button>
+  </div>
+  <div class="wave"></div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition UI</title>
+
+    <!-- Link to Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="start.css">
+</head>
+<body>
+    <div class="navbar">
+        <a class="nav-button" href="start.html">🏠 Home</a>
+        <a class="nav-button" href="compare1.html">🔄 Compare</a>
+        <a class="nav-button" href="about.html">ℹ️ About Us</a>
+        <a class="nav-button" href="settings.html">⚙️ Settings</a>
+        <a class="nav-button" href="upload.html">⬆️ Upload</a>
+    </div>
+
+    <div class="main-content">
+        <!-- Left: Instructions Section -->
+        <div class="instructions">
+            <div class="step">1 - Click the "Camera" or "Add Picture"</div>
+            <div class="step">2 - Position your face within the frame</div>
+            <div class="step">3 - Click the "Go" button to see results</div>
+        </div>
+
+        <!-- Right: Icons Section -->
+        <div class="icons">
+            <div class="icon-row">
+                <button class="icon-button">
+                    <i class="fas fa-camera"></i>
+                </button>
+
+                <button class="icon-button">
+                    <i class="fas fa-image"></i>
+                </button>
+            </div>
+
+            <div class="face-scan">
+                <img src="pic/face2.gif" alt="Face Scan Image">
+            </div>
+
+            <button class="go-button">Go</button>
+        </div>
+    </div>
+
+    <!-- Bottom-Left: Robot Icon -->
+    <div class="robot">
+        <i class="fas fa-robot"></i>
+    </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Background and container styling */
+body {
+    background-color: #0A2E46;
+    color: #FFFFFF;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 90%;
+}
+
+/* Left side content */
+.content {
+    max-width: 50%;
+}
+
+/* Logo styling with Kelly Slab font */
+.logo {
+    font-family: 'Kelly Slab', cursive;
+    font-size: 64px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.welcome-text {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.description {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Button styling */
+.get-started {
+    background-color: #3DA9FC;
+    color: #FFFFFF;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.get-started:hover {
+    background-color: #3292E1;
+}
+
+/* Right side phone mockup */
+.phone-mockup {
+    max-width: 40%;
+}
+
+.phone-mockup img {
+    width: 80%;
+    height: auto;
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Page</title>
+  <style>
+    /* General reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Wavy Background */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #3a8edc, #1e407c);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Wave effect */
+    .wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 200px;
+      background: url('https://www.svgrepo.com/show/204774/wave-line.svg');
+      background-size: cover;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      position: relative;
+    }
+
+    /* Go Back Icon */
+    .back-icon {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 30px;
+      color: black;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .back-icon:hover {
+      transform: scale(1.1);
+    }
+
+    /* Box Styles */
+    .info-box, .upload-box {
+      background: #d9d9d9;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+      font-weight: bold;
+      overflow: hidden; /* Ensures the image doesn't spill out */
+    }
+
+    .info-box {
+      width: 200px;
+      height: 200px;
+      text-align: left;
+      padding: 20px;
+      font-size: 20px;
+    }
+
+    .upload-box {
+      width: 400px;
+      height: 400px;
+      font-size: 20px;
+    }
+
+    .upload-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures the image fits properly */
+    }
+
+    /* Layout */
+    .main-content {
+      display: flex;
+      gap: 50px;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    .upload-btn {
+      margin-top: 20px;
+      background-color: #0a74da;
+      border: none;
+      padding: 15px 25px;
+      color: white;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background-color 0.3s ease;
+      cursor: pointer; /* Ensures cursor changes on hover */
+    }
+
+    .upload-btn:hover {
+      background-color: #064a99;
+    }
+
+    .upload-btn svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    #file-input {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Back Icon -->
+  <a href="javascript:history.back()" class="back-icon">←</a>
+
+  <div class="container">
+    <div class="main-content">
+      <!-- Info Box -->
+      <div class="info-box">
+        Age : <br>
+        Gender : <br>
+        Skin :
+      </div>
+      <!-- Upload Box -->
+      <div>
+        <div class="upload-box" id="image-container">No image selected</div>
+        <!-- File Input (Hidden) -->
+        <input type="file" id="file-input" accept="image/*" />
+        <!-- Upload Button -->
+        <button class="upload-btn" id="upload-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1M12 12V3m-3 3l3-3 3 3"/>
+          </svg>
+          Upload
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="wave"></div>
+
+  <script>
+    const uploadBtn = document.getElementById('upload-btn');
+    const fileInput = document.getElementById('file-input');
+    const imageContainer = document.getElementById('image-container');
+
+    // Trigger file input when "Upload" button is clicked
+    uploadBtn.addEventListener('click', () => {
+      fileInput.click();
+    });
+
+    // Display the selected image in the upload box
+    fileInput.addEventListener('change', (event) => {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          imageContainer.innerHTML = `<img src="${e.target.result}" alt="Uploaded Image">`;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  </script>
+</body>
+</html>

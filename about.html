@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #000; /* Text color set to black */
+      background: linear-gradient(120deg, #6aafff, #8ec5fc);
+      background-size: 400% 400%;
+      animation: gradientAnimation 8s ease infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      max-width: 1200px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .back-button {
+      font-size: 24px;
+      color: black;
+      text-decoration: none;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      background: #fff;
+      padding: 8px 15px;
+      border-radius: 50px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: background 0.3s;
+    }
+
+    .back-button:hover {
+      background: #f0f0f0;
+    }
+
+    .back-button span {
+      margin-left: 10px;
+    }
+
+    .icon {
+      margin-right: 40px;
+      transition: transform 0.3s ease;
+    }
+
+    .icon img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .icon img:hover {
+      transform: scale(1.1); /* Zoom animation on hover */
+    }
+
+    .content {
+      max-width: 700px;
+    }
+
+    .text-section, .commitment {
+      margin-bottom: 20px;
+      padding: 25px;
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+      font-size: 20px;
+      line-height: 1.8;
+      color: black;
+      transition: transform 0.3s ease;
+    }
+
+    .text-section:hover, .commitment:hover {
+      transform: translateY(-10px); /* Floating animation on hover */
+    }
+
+    h1 {
+      font-size: 36px;
+      color: black;
+      font-weight: 600;
+      margin-bottom: 10px;
+      transition: color 0.3s ease;
+    }
+
+    h1:hover {
+      color: #6aafff; /* Color change on hover */
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .back-icon {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 30px;
+      color: black;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .back-icon:hover {
+      transform: translateX(-5px); /* Slide left animation on hover */
+    }
+
+  </style>
+</head>
+<body>
+  <a href="javascript:history.back()" class="back-icon">←</a>
+  <div class="container">
+    <div class="icon">
+      <!-- Replace the src with your image URL -->
+      <img src="https://via.placeholder.com/180" alt="Your Image">
+    </div>
+    <div class="content">
+      <h1>About Us</h1>
+      <div class="text-section">
+        Welcome to our Face Recognition Project, a cutting-edge application designed to analyze facial features and provide insights into age, gender, and skin tone.
+      </div>
+      <div class="commitment">
+        Our team is committed to advancing artificial intelligence to create smarter, more inclusive, and practical solutions for real-world problems.
+      </div>
+    </div>
+  </div>
+</body>
+</html>
